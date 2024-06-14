@@ -328,6 +328,7 @@ PRODUCT_PACKAGES += \
     XiaomiTaroSettingsOverlay \
     XiaomiTaroSystemUIOverlay \
     XiaomiTaroWifiOverlay \
+    XiaomiTaroUsbOverlay \
     XiaomiTaroWifiMainlineOverlay
 
 # Partitions
@@ -404,6 +405,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.systemhelper@1.0.vendor
 
 # USB
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.usb.uvc.enabled=true
+
 PRODUCT_HAS_GADGET_HAL := true
 
 # VNDK
