@@ -21,4 +21,7 @@ cc_binary {
         "android.frameworks.sensorservice@1.0",
     ],
 
+    header_libs: [
+	"qti_kernel_headers",
+    ],
 }
