@@ -380,6 +380,9 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
     libsensorndkbridge
 
+PRODUCT_PACKAGES += \
+    sensor-notifier
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.compass.xml \
@@ -398,10 +401,6 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti-v2
-
-# Touchscreen
-PRODUCT_PACKAGES += \
-    nonui-notifier
 
 # TrustedUI
 PRODUCT_PACKAGES += \
