@@ -102,13 +102,6 @@ service qrtr-lookup /vendor/bin/qrtr-lookup
 on property:sys.boot_completed=1
     start qrtr-lookup
 
-service citsensor-hal-2-0 /vendor/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
-    class late_start
-    user system
-    group system input
-    override
-    task_profiles ServiceCapacityLow
-
 service ssgqmigd /vendor/bin/ssgqmigd64
     override
     class late_start
