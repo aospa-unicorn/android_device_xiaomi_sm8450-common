@@ -183,6 +183,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# FaceSense
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.face.sense_service.camera_id=1
+
 # Fingerprint
 ifneq ($(TARGET_USES_MFP_DAEMON),true)
 PRODUCT_PACKAGES += \
