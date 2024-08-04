@@ -416,6 +416,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.systemhelper@1.0.vendor
 
 # USB
+PRODUCT_PACKAGES += \
+    libusbhost.vendor
+
 PRODUCT_VENDOR_PROPERTIES += \
     ro.usb.uvc.enabled=true
 
