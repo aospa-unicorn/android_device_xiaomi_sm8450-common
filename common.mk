@@ -318,7 +318,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # Overlays
 PRODUCT_PACKAGES += \
     AOSPAXiaomiTaroFrameworksOverlay \
-    AOSPAXiaomiTaroSettingsOverlay \
     AOSPAXiaomiTaroSystemUIOverlay \
     DcDimmingFrameworksOverlay \
     XiaomiTaroCarrierConfigOverlay \
