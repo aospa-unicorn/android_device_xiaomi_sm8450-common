@@ -37,3 +37,9 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuctl/nnapi-hal/cpu.shares 20480
     write /dev/cpuctl/rt/cpu.shares 20480
     write /dev/cpuctl/top-app/cpu.shares 20480
+
+on property:sys.perf_mode_active=1
+    write /sys/devices/system/cpu/qcom_lpm/parameters/sleep_disabled 1
+
+on property:sys.perf_mode_active=0
+    write /sys/devices/system/cpu/qcom_lpm/parameters/sleep_disabled 0
