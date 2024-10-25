@@ -431,6 +431,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
 
+# Missing
+PRODUCT_PACKAGES += \
+    libjsoncpp.vendor
+    libsqlite.vendor \
+    libgui_vendor \
+    libaudioroute.vendor \
+    libcamera_metadata.vendor \
+
 # Vendor blobs
 $(call inherit-product, vendor/xiaomi/sm8450-common/sm8450-common-vendor.mk)
 

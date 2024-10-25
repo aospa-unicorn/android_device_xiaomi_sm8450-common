@@ -41,10 +41,14 @@
          to make the device to be fully charged at the target time, increase the value
     -->
     <integer name="config_chargingControlTimeMargin">45</integer>
+
     <!-- For a device that cannot bypass battery when charging stops (that is, the battery current
          is 0mA when charging stops), the battery will gradually discharge. So we need to make it
          recharge when the battery level is lower than a threshold. Set this so that the device
          will be charged between (limit - val) and limit. -->
     <integer name="config_chargingControlBatteryRechargeMargin">2</integer>
+
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
 
 </resources>
