@@ -26,7 +26,6 @@ import android.util.Log;
 import android.view.Display;
 import android.view.Display.HdrCapabilities;
 
-import co.aospa.xiaomiparts.camera.NfcCameraService;
 import co.aospa.xiaomiparts.display.ColorService;
 import co.aospa.xiaomiparts.display.DcDimmingService;
 import co.aospa.xiaomiparts.doze.AodBrightnessService;
@@ -52,7 +51,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         DcDimmingService.startService(context);
         AodBrightnessService.startService(context);
         PocketService.startService(context);
-        NfcCameraService.startService(context);
         TouchOrientationService.startService(context);
         ThermalUtils.getInstance(context).startService();
         GestureUtils.onBootCompleted(context);
