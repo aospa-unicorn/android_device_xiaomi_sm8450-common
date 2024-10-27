@@ -433,11 +433,13 @@ PRODUCT_COPY_FILES += \
 
 # Missing
 PRODUCT_PACKAGES += \
+    libcurl.vendor \
     libjsoncpp.vendor \
     libsqlite.vendor \
     libgui_vendor \
     libaudioroute.vendor \
-    libcamera_metadata.vendor
+    libcamera_metadata.vendor \
+    libexif.vendor
 
 # Vendor blobs
 $(call inherit-product, vendor/xiaomi/sm8450-common/sm8450-common-vendor.mk)
