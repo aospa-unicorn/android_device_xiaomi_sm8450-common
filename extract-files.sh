@@ -63,9 +63,6 @@ function blob_fixup() {
         vendor/bin/hw/android.hardware.security.keymint-service-qti | vendor/lib64/libqtikeymint.so)
             "${PATCHELF}" --add-needed "android.hardware.security.rkp-V1-ndk_platform.so" "${2}"
             ;;
-        vendor/bin/hw/dolbycodec2 | vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service | vendor/bin/hw/vendor.dolby.media.c2@1.0-service)
-            "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
-            ;;
         vendor/bin/hw/mfp-daemon | vendor/lib64/hw/displayfeature.default.so | vendor/lib64/hw/audio.primary.taro.so)
             "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
             ;;
@@ -84,9 +81,6 @@ function blob_fixup() {
             ;;
         vendor/etc/camera/pureView_parameter.xml)
             sed -i "s/=\([0-9]\+\)>/=\"\1\">/g" "${2}"
-            ;;
-        vendor/lib64/c2.dolby.client.so)
-            "${PATCHELF}" --add-needed "libcodec2_hidl_shim.so" "${2}"
             ;;
         vendor/lib64/vendor.libdpmframework.so)
             "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
