@@ -127,7 +127,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Device Settings
 PRODUCT_PACKAGES += \
     KeyHandler \
-    XiaomiDolby \
     XiaomiParts
 
 # Display / Graphics
@@ -305,9 +304,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.stagefright.c2inputsurface=-1 \
     ro.mediaserver.64b.enable=true \
     vendor.media.omx=0
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
 
 # Mlipay
 PRODUCT_PACKAGES += \
